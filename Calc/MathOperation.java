@@ -1,3 +1,5 @@
+package Calc;
+
 public enum MathOperation{
   ADD,
   SUBTRACT,

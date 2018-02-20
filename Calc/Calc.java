@@ -1,3 +1,5 @@
+package Calc;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -22,7 +24,7 @@ public class Calc {
         System.out.print("Enter second number: ");
         Double second = scan.nextDouble();
         calc.solve(first, second, operation);
-        System.out.println("Result: " + (int)calc.getResult());
+        System.out.println("Result: " + calc.getResult());
         calc.resetResult();
         System.out.print("Exit? (yes/no)");
         exit = scan.next();
