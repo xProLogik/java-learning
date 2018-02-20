@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -10,18 +11,24 @@ public class Calc {
       String exit = "no";
       while (!exit.equals("yes")) {
         System.out.print("Enter first number: ");
-        String first = scan.next();
+        Double first = scan.nextDouble();
+        MathOperation operation = MathOperation.ERROR_OPERATION;
+        while (operation == MathOperation.ERROR_OPERATION) {
+          System.out.print("Enter mathematical operation (+  -  *  /  ^): ");
+          String enterOperation = scan.next().replaceAll(" ", "");
+          if (enterOperation.length() == 1)
+            operation = MathOperation.getOperation(enterOperation.charAt(0));
+        }
         System.out.print("Enter second number: ");
-        String second = scan.next();
-        calc.add(Integer.valueOf(first), Integer.valueOf(second));
-        System.out.println("Result: "+calc.getResult());
+        Double second = scan.nextDouble();
+        calc.solve(first, second, operation);
+        System.out.println("Result: " + (int)calc.getResult());
         calc.resetResult();
         System.out.print("Exit? (yes/no)");
         exit = scan.next();
       }
-    }
-    catch (NumberFormatException e){
-      System.out.println("Not number");
+    } catch (InputMismatchException e) {
+      System.out.println("Invalid number");
     }
   }
 }
