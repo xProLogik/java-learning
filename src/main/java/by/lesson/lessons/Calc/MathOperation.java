@@ -1,4 +1,4 @@
-package Calc;
+package by.lesson.lessons.Calc;
 
 public enum MathOperation{
   ADD,

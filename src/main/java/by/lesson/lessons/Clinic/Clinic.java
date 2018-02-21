@@ -1,4 +1,4 @@
-package Clinic;
+package by.lesson.lessons.Clinic;
 
 import java.util.ArrayList;
 import java.util.Scanner;

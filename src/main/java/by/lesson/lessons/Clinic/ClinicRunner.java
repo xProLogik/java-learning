@@ -1,4 +1,4 @@
-package Clinic;
+package by.lesson.lessons.Clinic;
 
 /**
  * Работа Клиники
@@ -20,7 +20,7 @@ public class ClinicRunner {
     //редактирование имени человека и клички животного
     clinic.changeNameClient("John","Bob");
     clinic.changeNamePet("Bunny","Hallo");
-
+    
     clinic.showClinicBase();
   }
 }

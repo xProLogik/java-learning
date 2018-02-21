@@ -1,4 +1,4 @@
-package Calc;
+package by.lesson.lessons.Calc;
 
 /**
  * Класс реализует калькулятор

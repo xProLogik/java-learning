@@ -1,4 +1,4 @@
-package Clinic;
+package by.lesson.lessons.Clinic;
 
 /**
  * виды животных

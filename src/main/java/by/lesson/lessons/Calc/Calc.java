@@ -1,4 +1,4 @@
-package Calc;
+package by.lesson.lessons.Calc;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
